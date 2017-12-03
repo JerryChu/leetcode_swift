@@ -11,3 +11,4 @@
 ## Solved
 1. [twoSum](https://leetcode.com/problems/two-sum/description/)
 2. [addTwoNumbers](https://leetcode.com/problems/add-two-numbers/description/)
+3. [longestSubstring](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)

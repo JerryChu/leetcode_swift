@@ -1,6 +1,7 @@
 enum Problem: String {
     case twoSum = "twoSum"
     case addTwoNumbers = "addTwoNumbers"
+    case longestSubstring = "longestSubstring"
 }
 
 class Solution {
@@ -18,6 +19,8 @@ class Solution {
             if let node = solution.addTwoNumbers(l1, l2) {
                 print(node.toArray())
             }
+        case .longestSubstring:
+            print(solution.lengthOfLongestSubstring("abcabcab"))
         }
     }
 }

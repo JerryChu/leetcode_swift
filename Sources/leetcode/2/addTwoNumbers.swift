@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/add-two-numbers/description/
+
 /**
  * Definition for singly-linked list.
  */
@@ -55,7 +57,7 @@ extension Solution {
             tmp = tmp.next!
         }
         if overflow {
-            var last = ListNode(1)
+            let last = ListNode(1)
             last.next = nil
             tmp.next = last
         } else {
