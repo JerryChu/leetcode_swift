@@ -28,4 +28,13 @@ class Solution {
 if CommandLine.arguments.count == 2 {
     let problem = CommandLine.arguments[1]  
     Solution.solve(Problem(rawValue:problem))
+} else {
+    print("""
+    \u{001B}[0;31m
+    Invalid parameters!
+    Usage: 
+        swift run leetcode `problem`
+    Example:
+        swift run leetcode twosum
+    """)
 }

@@ -2,7 +2,7 @@
 
 extension Solution {
     func lengthOfLongestSubstring(_ s: String) -> Int {
-        let characters = Array(s.characters)
+        let characters = Array(s)
         var cur = 0, last = 0, result = 0
         var dict = [Character: Int]()
         while cur < characters.count {
