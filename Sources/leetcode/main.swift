@@ -2,6 +2,7 @@ enum Problem: String {
     case twoSum = "twoSum"
     case addTwoNumbers = "addTwoNumbers"
     case longestSubstring = "longestSubstring"
+    case findMedian = "findMedian"
 }
 
 class Solution {
@@ -21,6 +22,8 @@ class Solution {
             }
         case .longestSubstring:
             print(solution.lengthOfLongestSubstring("abcabcab"))
+        case .findMedian:
+            print(solution.findMedianSortedArrays([1, 3], [2, 4]))
         }
     }
 }
