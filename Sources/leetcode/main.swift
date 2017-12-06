@@ -3,6 +3,7 @@ enum Problem: String {
     case addTwoNumbers = "addTwoNumbers"
     case longestSubstring = "longestSubstring"
     case findMedian = "findMedian"
+    case longestPalindrome = "longestPalindrome"
 }
 
 class Solution {
@@ -24,6 +25,8 @@ class Solution {
             print(solution.lengthOfLongestSubstring("abcabcab"))
         case .findMedian:
             print(solution.findMedianSortedArrays([1, 3], [2, 4]))
+        case .longestPalindrome:
+            print(solution.longestPalindrome("babad"))
         }
     }
 }
