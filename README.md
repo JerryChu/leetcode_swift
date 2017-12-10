@@ -14,3 +14,5 @@
 3. [longestSubstring](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)  
 4. [findMedian](https://leetcode.com/problems/median-of-two-sorted-arrays/description/)
 5. [longestPalindrome](https://leetcode.com/problems/longest-palindromic-substring/description/)
+6. [zigzagConversion](https://leetcode.com/problems/zigzag-conversion/description/)
+7. [reverseInteger](https://leetcode.com/problems/reverse-integer/description/)

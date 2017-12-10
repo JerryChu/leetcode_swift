@@ -1,9 +1,13 @@
+// https://leetcode.com/
+
 enum Problem: String {
     case twoSum = "twoSum"
     case addTwoNumbers = "addTwoNumbers"
     case longestSubstring = "longestSubstring"
     case findMedian = "findMedian"
     case longestPalindrome = "longestPalindrome"
+    case zigzagConversion = "zigzagConversion"
+    case reverseInteger = "reverseInteger"
 }
 
 class Solution {
@@ -27,6 +31,10 @@ class Solution {
             print(solution.findMedianSortedArrays([1, 3], [2, 4]))
         case .longestPalindrome:
             print(solution.longestPalindrome("babad"))
+        case .zigzagConversion:
+            print(solution.convert("paypalishiring", 3))
+        case .reverseInteger:
+            print(solution.reverse(1534236469))
         }
     }
 }
