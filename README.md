@@ -16,3 +16,4 @@
 5. [longestPalindrome](https://leetcode.com/problems/longest-palindromic-substring/description/)
 6. [zigzagConversion](https://leetcode.com/problems/zigzag-conversion/description/)
 7. [reverseInteger](https://leetcode.com/problems/reverse-integer/description/)
+8. [atoi](https://leetcode.com/problems/string-to-integer-atoi/description/)

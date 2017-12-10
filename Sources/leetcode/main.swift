@@ -8,6 +8,7 @@ enum Problem: String {
     case longestPalindrome = "longestPalindrome"
     case zigzagConversion = "zigzagConversion"
     case reverseInteger = "reverseInteger"
+    case atoi = "atoi"
 }
 
 class Solution {
@@ -34,7 +35,9 @@ class Solution {
         case .zigzagConversion:
             print(solution.convert("paypalishiring", 3))
         case .reverseInteger:
-            print(solution.reverse(1534236469))
+            print(solution.reverse(-123))
+        case .atoi:
+            print(solution.myAtoi("-2147483648"))
         }
     }
 }
