@@ -17,3 +17,4 @@
 6. [zigzagConversion](https://leetcode.com/problems/zigzag-conversion/description/)
 7. [reverseInteger](https://leetcode.com/problems/reverse-integer/description/)
 8. [atoi](https://leetcode.com/problems/string-to-integer-atoi/description/)
+9. [palindromeNumber](https://leetcode.com/problems/palindrome-number/description/)
