@@ -10,6 +10,7 @@ enum Problem: String {
     case reverseInteger = "reverseInteger"
     case atoi = "atoi"
     case palindromeNumber = "palindromeNumber"
+    case regularExpression = "regularExpression"
 }
 
 class Solution {
@@ -41,6 +42,9 @@ class Solution {
             print(solution.myAtoi("-2147483648"))
         case .palindromeNumber:
             print(solution.isPalindrome(12321))
+        case .regularExpression:
+            print(solution.isMatch("ab", ".*"))
+            print(solution.isMatch("aab", "c*a*b"))
         }
     }
 }
