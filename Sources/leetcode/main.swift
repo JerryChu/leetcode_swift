@@ -12,6 +12,7 @@ enum Problem: String {
     case palindromeNumber = "palindromeNumber"
     case regularExpression = "regularExpression"
     case containerWithMostWater = "containerWithMostWater"
+    case integerToRoman = "integerToRoman"
 }
 
 class Solution {
@@ -48,6 +49,8 @@ class Solution {
             print(solution.isMatch("aab", "c*a*b"))
         case .containerWithMostWater:
             print(solution.maxArea([1, 3, 4, 2]))
+        case .integerToRoman:
+            print(solution.intToRoman(1234))
         }
     }
 }
