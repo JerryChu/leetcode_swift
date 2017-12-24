@@ -13,6 +13,8 @@ enum Problem: String {
     case regularExpression = "regularExpression"
     case containerWithMostWater = "containerWithMostWater"
     case integerToRoman = "integerToRoman"
+    case romanToInteger = "romanToInteger"
+    case longestCommonPrefix = "longestCommonPrefix"
 }
 
 class Solution {
@@ -51,13 +53,22 @@ class Solution {
             print(solution.maxArea([1, 3, 4, 2]))
         case .integerToRoman:
             print(solution.intToRoman(1234))
+        case .romanToInteger:
+            print(solution.romanToInt("CDXXI"))
+        case .longestCommonPrefix:
+            print(solution.longestCommonPrefix(["a", "b", "c"]))
         }
     }
 }
 
 if CommandLine.arguments.count == 2 {
-    let problem = CommandLine.arguments[1]  
-    Solution.solve(Problem(rawValue:problem))
+    let param = CommandLine.arguments[1]  
+    let problem = Problem(rawValue:param)
+    if problem != nil {
+        Solution.solve(problem)
+    } else {
+        print("\u{001B}[0;31mUnknown problem!")
+    }
 } else {
     print("""
     \u{001B}[0;31m

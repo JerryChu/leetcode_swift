@@ -21,3 +21,5 @@
 10. [regularExpression](https://leetcode.com/problems/regular-expression-matching/description/)
 11. [containerWithMostWater](https://leetcode.com/problems/container-with-most-water/description/)
 12. [integerToRoman](https://leetcode.com/problems/integer-to-roman/description/)
+13. [romanToInteger](https://leetcode.com/problems/roman-to-integer/description/)
+14. [longestCommonPrefix](https://leetcode.com/problems/longest-common-prefix/description/)
