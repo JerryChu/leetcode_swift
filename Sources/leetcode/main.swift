@@ -15,6 +15,7 @@ enum Problem: String {
     case integerToRoman = "integerToRoman"
     case romanToInteger = "romanToInteger"
     case longestCommonPrefix = "longestCommonPrefix"
+    case threeSum = "threeSum"
 }
 
 class Solution {
@@ -57,6 +58,8 @@ class Solution {
             print(solution.romanToInt("CDXXI"))
         case .longestCommonPrefix:
             print(solution.longestCommonPrefix(["a", "b", "c"]))
+        case .threeSum:
+            print(solution.threeSum([-5,0,-2,3,-2,1,1,3,0,-5,3,3,0,-1]))
         }
     }
 }
