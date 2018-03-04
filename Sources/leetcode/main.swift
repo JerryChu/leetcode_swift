@@ -17,6 +17,7 @@ enum Problem: String {
     case longestCommonPrefix = "longestCommonPrefix"
     case threeSum = "threeSum"
     case letterCombination = "letterCombination"
+    case validParentheses = "validParentheses"
 }
 
 class Solution {
@@ -63,6 +64,8 @@ class Solution {
             print(solution.threeSum([-5,0,-2,3,-2,1,1,3,0,-5,3,3,0,-1]))
         case .letterCombination:
             print(solution.letterCombinations("23"))
+        case .validParentheses:
+            print(solution.isValid("({})"))
         }
     }
 }
