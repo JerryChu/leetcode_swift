@@ -1,6 +1,6 @@
 // https://leetcode.com/
 
-enum Problem: String {
+enum Problem: String, CaseIterable {
     case twoSum = "twoSum"
     case addTwoNumbers = "addTwoNumbers"
     case longestSubstring = "longestSubstring"
@@ -76,7 +76,9 @@ if CommandLine.arguments.count == 2 {
     if problem != nil {
         Solution.solve(problem)
     } else {
-        print("\u{001B}[0;31mUnknown problem!")
+        print("\u{001B}[0;31mUnknown problem! Supported problems are:\u{001B}[0m")
+        Problem.allCases.forEach{ print("\($0.rawValue)") }
+        print("\n")
     }
 } else {
     print("""
@@ -85,6 +87,6 @@ if CommandLine.arguments.count == 2 {
     Usage: 
         swift run leetcode `problem`
     Example:
-        swift run leetcode twosum
+        swift run leetcode twoSum
     """)
 }
