@@ -16,6 +16,7 @@ enum Problem: String, CaseIterable {
     case romanToInteger = "romanToInteger"
     case longestCommonPrefix = "longestCommonPrefix"
     case threeSum = "threeSum"
+    case threeSumClosest = "threeSumClosest"
     case letterCombination = "letterCombination"
     case validParentheses = "validParentheses"
 }
@@ -62,6 +63,8 @@ class Solution {
             print(solution.longestCommonPrefix(["a", "b", "c"]))
         case .threeSum:
             print(solution.threeSum([-5,0,-2,3,-2,1,1,3,0,-5,3,3,0,-1]))
+        case .threeSumClosest:
+            print(solution.threeSumClosest([1,2,4,8,16,32,64,128], 82))
         case .letterCombination:
             print(solution.letterCombinations("23"))
         case .validParentheses:
