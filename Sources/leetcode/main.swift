@@ -20,6 +20,7 @@ enum Problem: String, CaseIterable {
     case letterCombination = "letterCombination"
     case validParentheses = "validParentheses"
     case mergeTwoLists = "mergeTwoLists"
+    case printVertically = "printVertically"
 }
 
 class Solution {
@@ -74,6 +75,8 @@ class Solution {
             let list1 = ListNode.build(from: [1, 2, 4])
             let list2 = ListNode.build(from: [1, 3, 4])
             print(solution.mergeTwoLists(list1, list2)!.toArray())
+        case .printVertically:
+            print(solution.printVertically("TO BE OR NOT TO BE"))
         }
     }
 }
