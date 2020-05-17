@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/add-two-numbers/description/
 
 extension Solution {
-    func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+    func addTwoNumbers(_ l1: ListNode<Int>?, _ l2: ListNode<Int>?) -> ListNode<Int>? {
         var sum = 0, overflow = false
         if let l1 = l1 {
             sum += l1.val

@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/merge-two-sorted-lists/
 
 extension Solution {    
-    func mergeTwoLists(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
+    func mergeTwoLists(_ l1: ListNode<Int>?, _ l2: ListNode<Int>?) -> ListNode<Int>? {
         guard l1 != nil else {
             return l2
         }

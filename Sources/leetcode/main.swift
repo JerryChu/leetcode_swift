@@ -1,27 +1,28 @@
 // https://leetcode.com/
 
 enum Problem: String, CaseIterable {
-    case twoSum = "twoSum"
-    case addTwoNumbers = "addTwoNumbers"
-    case longestSubstring = "longestSubstring"
-    case findMedian = "findMedian"
-    case longestPalindrome = "longestPalindrome"
-    case zigzagConversion = "zigzagConversion"
-    case reverseInteger = "reverseInteger"
-    case atoi = "atoi"
-    case palindromeNumber = "palindromeNumber"
-    case regularExpression = "regularExpression"
-    case containerWithMostWater = "containerWithMostWater"
-    case integerToRoman = "integerToRoman"
-    case romanToInteger = "romanToInteger"
-    case longestCommonPrefix = "longestCommonPrefix"
-    case threeSum = "threeSum"
-    case threeSumClosest = "threeSumClosest"
-    case letterCombination = "letterCombination"
-    case validParentheses = "validParentheses"
-    case mergeTwoLists = "mergeTwoLists"
-    case largestTimeFromDigits = "largestTimeFromDigits"
-    case printVertically = "printVertically"
+    case twoSum = "[1]twoSum"
+    case addTwoNumbers = "[2]addTwoNumbers"
+    case longestSubstring = "[3]longestSubstring"
+    case findMedian = "[4]findMedian"
+    case longestPalindrome = "[5]longestPalindrome"
+    case zigzagConversion = "[6]zigzagConversion"
+    case reverseInteger = "[7]reverseInteger"
+    case atoi = "[8]atoi"
+    case palindromeNumber = "[9]palindromeNumber"
+    case regularExpression = "[10]regularExpression"
+    case containerWithMostWater = "[11]containerWithMostWater"
+    case integerToRoman = "[12]integerToRoman"
+    case romanToInteger = "[13]romanToInteger"
+    case longestCommonPrefix = "[14]longestCommonPrefix"
+    case threeSum = "[15]threeSum"
+    case threeSumClosest = "[16]threeSumClosest"
+    case letterCombination = "[17]letterCombination"
+    case validParentheses = "[20]validParentheses"
+    case mergeTwoLists = "[21]mergeTwoLists"
+    case diameterOfBinaryTree = "[543]diameterOfBinaryTree"
+    case largestTimeFromDigits = "[949]largestTimeFromDigits"
+    case printVertically = "[1324]printVertically"
 }
 
 class Solution {
@@ -76,6 +77,9 @@ class Solution {
             let list1 = ListNode.build(from: [1, 2, 4])
             let list2 = ListNode.build(from: [1, 3, 4])
             print(solution.mergeTwoLists(list1, list2)!.toArray())
+        case .diameterOfBinaryTree:
+            let tree = TreeNode<Int>.randomIntTree()
+            print(solution.diameterOfBinaryTree(tree))
         case .largestTimeFromDigits:
             print(solution.largestTimeFromDigits([1, 9, 9, 4]))
         case .printVertically:

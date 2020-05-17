@@ -1,19 +1,19 @@
 /**
  * Definition for singly-linked list.
  */
-class ListNode {
-    var val: Int
+class ListNode<T> {
+    var val: T
     var next: ListNode?
-    init(_ val: Int) {
+    init(_ val: T) {
         self.val = val
         self.next = nil
     }
-    init(_ val: Int, next: ListNode?) {
+    init(_ val: T, next: ListNode?) {
         self.val = val
         self.next = next
     }
 
-    class func build(from array:[Int]) -> ListNode? {
+    class func build(from array:[T]) -> ListNode? {
         guard array.count > 0 else {
             return nil
         }
@@ -26,8 +26,8 @@ class ListNode {
         return nodes[0]
     }
 
-    func toArray() -> [Int] {
-        var result = [Int]()
+    func toArray() -> [T] {
+        var result = [T]()
         result.append(self.val)
         var node = self.next
         while node != nil {
