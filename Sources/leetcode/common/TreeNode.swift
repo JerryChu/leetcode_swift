@@ -18,7 +18,7 @@ class TreeNode<T>: CustomStringConvertible {
     }
 
     // 深度
-    private func depth() -> Int {
+    public func depth() -> Int {
         let leftDepth = self.left?.depth() ?? 0
         let rightDepth = self.right?.depth() ?? 0
         return max(leftDepth + 1, rightDepth + 1)

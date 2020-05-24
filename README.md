@@ -28,6 +28,7 @@
 - [17][letterCombination](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)
 - [20][validParentheses](https://leetcode.com/problems/valid-parentheses/description/)
 - [21][mergeTwoLists](https://leetcode.com/problems/merge-two-sorted-lists/)
+- [104][maxDepthOfBinaryTree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [543][diameterOfBinaryTree](https://leetcode.com/problems/diameter-of-binary-tree/)
 - [949][largestTimeFromDigits](https://leetcode.com/problems/largest-time-for-given-digits/)
 - [1324][printVertically](https://leetcode.com/problems/print-words-vertically/)
