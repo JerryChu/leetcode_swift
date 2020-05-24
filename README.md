@@ -1,5 +1,7 @@
 # solution of leetcode problems using swift 
 
+![LeetCodeSwift](https://github.com/JerryChu/leetcode_swift/workflows/LeetCodeSwift/badge.svg)
+
 ## Usage
     swift run leetcode `problem`
 
