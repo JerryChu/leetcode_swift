@@ -34,8 +34,8 @@ public class Solution {
         case .twoSum:
             print(solution.twoSum([2, 7, 11, 15], 9))
         case .addTwoNumbers:
-            let l1 = ListNode(2, next: ListNode(4, next: ListNode(3, next: nil)))
-            let l2 = ListNode(5, next: ListNode(6, next: ListNode(4, next: nil)))
+            let l1 = ListNode.build(from: [2, 4, 3])
+            let l2 = ListNode.build(from: [5, 6, 4])
             if let node = solution.addTwoNumbers(l1, l2) {
                 print(node.toArray())
             }

@@ -1,7 +1,7 @@
 /**
  * Definition for singly-linked list.
  */
-class ListNode<T> {
+class ListNode<T: Equatable>: Equatable, CustomStringConvertible {
     var val: T
     var next: ListNode?
     init(_ val: T) {
@@ -11,6 +11,14 @@ class ListNode<T> {
     init(_ val: T, next: ListNode?) {
         self.val = val
         self.next = next
+    }
+    
+    var description: String {
+        self.toArray().description
+    }
+    
+    static func == (lhs: ListNode, rhs: ListNode) -> Bool {
+        return lhs.toArray() == rhs.toArray()
     }
 
     class func build(from array:[T]) -> ListNode? {
