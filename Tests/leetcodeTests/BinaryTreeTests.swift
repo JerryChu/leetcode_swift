@@ -5,33 +5,39 @@ class BinaryTreeTests: XCTestCase {
 
     let solution = Solution()
 
+    func testBuildFromArray() {
+        XCTAssertEqual(TreeNode.build(from: [0])!.toArray(), [0])
+        XCTAssertEqual(TreeNode.build(from: [0, nil])!.toArray(), [0, nil])
+        XCTAssertEqual(TreeNode.build(from: [1, 2])!.toArray(), [1, 2])
+        XCTAssertEqual(TreeNode.build(from: [1, 2, 3])!.toArray(), [1, 2, 3])
+        XCTAssertEqual(TreeNode.build(from: [1, nil, 2, 3])!.toArray(), [1, nil, 2, 3])
+        XCTAssertEqual(TreeNode.build(from: [1, 2, 3, nil])!.toArray(), [1, 2, 3, nil])
+        XCTAssertEqual(TreeNode.build(from: [1, 2, 3, 4, 5, 6])!.toArray(), [1, 2, 3, 4, 5, 6])
+    }
+
     func testDepth() {
-        XCTAssertEqual(solution.maxDepth(emptyTree()), 0)
-        XCTAssertEqual(solution.maxDepth(oneLevelTree()), 1)
-        XCTAssertEqual(solution.maxDepth(twoLevelTree()), 2)
-        XCTAssertEqual(solution.maxDepth(threeLevelTree()), 3)
+        XCTAssertEqual(solution.maxDepth(TreeNode.build(from: [])), 0)
+        XCTAssertEqual(solution.maxDepth(TreeNode.build(from: [1])), 1)
+        XCTAssertEqual(solution.maxDepth(TreeNode.build(from: [1, 2, 3])), 2)
+        XCTAssertEqual(solution.maxDepth(TreeNode.build(from: [1, 2, 3, 4, 5])), 3)
     }
 
     func testDiameter() {
-        XCTAssertEqual(solution.diameterOfBinaryTree(emptyTree()), 0)
-        XCTAssertEqual(solution.diameterOfBinaryTree(oneLevelTree()), 0)
-        XCTAssertEqual(solution.diameterOfBinaryTree(twoLevelTree()), 2)
-        XCTAssertEqual(solution.diameterOfBinaryTree(threeLevelTree()), 3)
+        XCTAssertEqual(solution.diameterOfBinaryTree(TreeNode.build(from: [])), 0)
+        XCTAssertEqual(solution.diameterOfBinaryTree(TreeNode.build(from: [1])), 0)
+        XCTAssertEqual(solution.diameterOfBinaryTree(TreeNode.build(from: [1, 2, 3])), 2)
+        XCTAssertEqual(solution.diameterOfBinaryTree(TreeNode.build(from: [1, 2, 3, 4, 5])), 3)
     }
 
-    private func emptyTree() -> TreeNode<Int>? {
-        return nil
-    }
-
-    private func oneLevelTree() -> TreeNode<Int> {
-        return TreeNode<Int>(1)
-    }
-
-    private func twoLevelTree() -> TreeNode<Int> {
-        return TreeNode<Int>(1, left: TreeNode<Int>(2), right: TreeNode<Int>(3))
-    }
-
-    private func threeLevelTree() -> TreeNode<Int> {
-        return TreeNode<Int>(1, left: TreeNode<Int>(2, left: TreeNode<Int>(4), right: TreeNode<Int>(5)), right: TreeNode<Int>(3))
+    func testTilt() {
+        XCTAssertEqual(solution.findTilt(TreeNode.build(from: [])), 0)
+        XCTAssertEqual(solution.findTilt(TreeNode.build(from: [1])), 0)
+        XCTAssertEqual(solution.findTilt(TreeNode.build(from: [1, 2, 3])), 1)
+        XCTAssertEqual(solution.findTilt(TreeNode.build(from: [1, 2, 3, 4, 5])), 9)
+        
+        XCTAssertEqual(solution.findTilt2(TreeNode.build(from: [])), 0)
+        XCTAssertEqual(solution.findTilt2(TreeNode.build(from: [1])), 0)
+        XCTAssertEqual(solution.findTilt2(TreeNode.build(from: [1, 2, 3])), 1)
+        XCTAssertEqual(solution.findTilt2(TreeNode.build(from: [1, 2, 3, 4, 5])), 9)
     }
 }

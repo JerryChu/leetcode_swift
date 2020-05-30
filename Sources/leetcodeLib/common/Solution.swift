@@ -20,6 +20,8 @@ public enum Problem: String, CaseIterable {
     case mergeTwoLists = "mergeTwoLists"
     case maxDepthOfBinaryTree = "maxDepthOfBinaryTree"
     case diameterOfBinaryTree = "diameterOfBinaryTree"
+    case binaryTreeTilt = "binaryTreeTilt"
+    case printBinaryTree = "printBinaryTree"
     case largestTimeFromDigits = "largestTimeFromDigits"
     case printVertically = "printVertically"
 }
@@ -77,11 +79,17 @@ public class Solution {
             let list2 = ListNode.build(from: [1, 3, 4])
             print(solution.mergeTwoLists(list1, list2)!.toArray())
         case .maxDepthOfBinaryTree:
-            let tree = TreeNode<Int>.randomIntTree()
+            let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
             print(solution.maxDepth(tree))
         case .diameterOfBinaryTree:
-            let tree = TreeNode<Int>.randomIntTree()
+            let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
             print(solution.diameterOfBinaryTree(tree))
+        case .binaryTreeTilt:
+            let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
+            print(solution.findTilt(tree))
+        case .printBinaryTree:
+            let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
+            print(solution.printTree(tree))
         case .largestTimeFromDigits:
             print(solution.largestTimeFromDigits([1, 9, 9, 4]))
         case .printVertically:

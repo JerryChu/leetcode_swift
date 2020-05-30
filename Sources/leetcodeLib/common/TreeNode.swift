@@ -13,10 +13,6 @@ class TreeNode<T>: CustomStringConvertible {
         return "\(self.val)"
     }
 
-    class func randomIntTree() -> TreeNode<Int> {
-        return TreeNode<Int>(1, left: TreeNode<Int>(2, left: TreeNode<Int>(4), right: TreeNode<Int>(5)), right: TreeNode<Int>(3))
-    }
-
     // 深度
     public func depth() -> Int {
         let leftDepth = self.left?.depth() ?? 0
@@ -63,5 +59,70 @@ class TreeNode<T>: CustomStringConvertible {
             nextWidth = 0
         }
         return width
+    }
+
+        class func build(from array:[T]) -> TreeNode? {
+        guard array.count > 0 else {
+            return nil
+        }
+
+        let root = TreeNode(array[0])
+
+        var queue = [TreeNode]() // as if it's a queue
+        queue.append(root)
+        var currentCount = 1
+        var nextCount = 0
+        var i = 1
+
+        while i < array.count {
+            while currentCount > 0 {
+                let node = queue.removeFirst()
+                if i < array.count {
+                    node.left = TreeNode(array[i])
+                    queue.append(node.left!)
+                    nextCount += 1
+                }
+                i += 1
+                if i < array.count {
+                    node.right = TreeNode(array[i])
+                    queue.append(node.right!)
+                    nextCount += 1
+                }
+                i += 1
+                currentCount -= 1
+            }
+            currentCount = nextCount
+            nextCount = 0
+        }
+        return root
+    }
+
+    /// 宽度遍历
+    func toArray() -> [T] {
+        var result = [T]()
+        var currentWidth = 1
+        var nextWidth = 0
+        var array = [TreeNode]()
+        array.append(self) // it's better to use a `queue`
+
+        while array.count > 0 {
+            while currentWidth > 0 {
+                let currentNode = array.removeFirst()
+                result.append(currentNode.val)
+                
+                if let leftNode = currentNode.left {
+                    array.append(leftNode)
+                    nextWidth += 1
+                }
+                if let rightNode = currentNode.right {
+                    array.append(rightNode)
+                    nextWidth += 1
+                }
+                currentWidth -= 1
+            }
+            currentWidth = nextWidth
+            nextWidth = 0
+        }
+        return result
     }
 }

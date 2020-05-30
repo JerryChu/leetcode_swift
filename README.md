@@ -32,5 +32,7 @@
 - [21][mergeTwoLists](https://leetcode.com/problems/merge-two-sorted-lists/)
 - [104][maxDepthOfBinaryTree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [543][diameterOfBinaryTree](https://leetcode.com/problems/diameter-of-binary-tree/)
+- [563][binaryTreeTilt](https://leetcode.com/problems/binary-tree-tilt/)
+- [655][printBinaryTree](// https://leetcode.com/problems/print-binary-tree/)
 - [949][largestTimeFromDigits](https://leetcode.com/problems/largest-time-for-given-digits/)
 - [1324][printVertically](https://leetcode.com/problems/print-words-vertically/)
