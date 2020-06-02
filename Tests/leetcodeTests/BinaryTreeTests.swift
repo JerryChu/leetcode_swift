@@ -40,4 +40,12 @@ class BinaryTreeTests: XCTestCase {
         XCTAssertEqual(solution.findTilt2(TreeNode.build(from: [1, 2, 3])), 1)
         XCTAssertEqual(solution.findTilt2(TreeNode.build(from: [1, 2, 3, 4, 5])), 9)
     }
+
+    func testIsUnival() {
+        XCTAssertEqual(solution.isUnivalTree(TreeNode.build(from: [])), true)
+        XCTAssertEqual(solution.isUnivalTree(TreeNode.build(from: [1])), true)
+        XCTAssertEqual(solution.isUnivalTree(TreeNode.build(from: [1, 1])), true)
+        XCTAssertEqual(solution.isUnivalTree(TreeNode.build(from: [1, 1, 1])), true)
+        XCTAssertEqual(solution.isUnivalTree(TreeNode.build(from: [1, 1, 1, 1])), true)
+    }
 }
