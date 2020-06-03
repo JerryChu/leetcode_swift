@@ -1,4 +1,4 @@
-class TreeNode<T>: CustomStringConvertible {
+class TreeNode<T>: CustomStringConvertible, Equatable where T: Equatable {
     var val: T
     var left: TreeNode<T>?
     var right: TreeNode<T>?
@@ -11,6 +11,10 @@ class TreeNode<T>: CustomStringConvertible {
 
     var description: String { 
         return "\(self.val)"
+    }
+
+    static func == (lhs: TreeNode, rhs: TreeNode) -> Bool {
+        return lhs.toArray() == rhs.toArray()
     }
 
     // 深度
@@ -61,7 +65,7 @@ class TreeNode<T>: CustomStringConvertible {
         return width
     }
 
-        class func build(from array:[T]) -> TreeNode? {
+    class func build(from array:[T]) -> TreeNode? {
         guard array.count > 0 else {
             return nil
         }

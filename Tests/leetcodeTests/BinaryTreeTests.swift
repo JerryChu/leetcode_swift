@@ -48,4 +48,12 @@ class BinaryTreeTests: XCTestCase {
         XCTAssertEqual(solution.isUnivalTree(TreeNode.build(from: [1, 1, 1])), true)
         XCTAssertEqual(solution.isUnivalTree(TreeNode.build(from: [1, 1, 1, 1])), true)
     }
+
+    func testRevert() {
+        XCTAssertEqual(solution.invertTree(TreeNode.build(from: [])), TreeNode.build(from: []))
+        XCTAssertEqual(solution.invertTree(TreeNode.build(from: [1])), TreeNode.build(from: [1]))
+        XCTAssertEqual(solution.invertTree(TreeNode.build(from: [1, 2])), TreeNode.build(from: [1, 2]))
+        XCTAssertEqual(solution.invertTree(TreeNode.build(from: [1, 2, 3])), TreeNode.build(from: [1, 3, 2]))
+        XCTAssertEqual(solution.invertTree(TreeNode.build(from: [4, 2, 7, 1, 3, 6, 9])), TreeNode.build(from: [4, 7, 2, 9, 6, 3, 1]))
+    }
 }
