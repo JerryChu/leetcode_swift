@@ -31,6 +31,7 @@
 - [20][validParentheses](https://leetcode.com/problems/valid-parentheses/description/)
 - [21][mergeTwoLists](https://leetcode.com/problems/merge-two-sorted-lists/)
 - [104][maxDepthOfBinaryTree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+- [110][balancedBinaryTree](https://leetcode-cn.com/problems/balanced-binary-tree/)
 - [226][invertBinaryTree](// https://leetcode-cn.com/problems/invert-binary-tree/)
 - [543][diameterOfBinaryTree](https://leetcode.com/problems/diameter-of-binary-tree/)
 - [563][binaryTreeTilt](https://leetcode.com/problems/binary-tree-tilt/)

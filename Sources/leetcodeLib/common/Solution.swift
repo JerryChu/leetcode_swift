@@ -19,6 +19,7 @@ public enum Problem: String, CaseIterable {
     case validParentheses = "validParentheses"
     case mergeTwoLists = "mergeTwoLists"
     case maxDepthOfBinaryTree = "maxDepthOfBinaryTree"
+    case balancedBinaryTree = "balancedBinaryTree"
     case invertBinaryTree = "invertBinaryTree"
     case diameterOfBinaryTree = "diameterOfBinaryTree"
     case binaryTreeTilt = "binaryTreeTilt"
@@ -83,6 +84,9 @@ public class Solution {
         case .maxDepthOfBinaryTree:
             let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
             print(solution.maxDepth(tree))
+        case .balancedBinaryTree:
+            let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
+            print(solution.isBalanced(tree))
         case .invertBinaryTree:
             let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
             print(solution.invertTree(tree)!.toArray())

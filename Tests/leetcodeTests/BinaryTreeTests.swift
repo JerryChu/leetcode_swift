@@ -56,4 +56,14 @@ class BinaryTreeTests: XCTestCase {
         XCTAssertEqual(solution.invertTree(TreeNode.build(from: [1, 2, 3])), TreeNode.build(from: [1, 3, 2]))
         XCTAssertEqual(solution.invertTree(TreeNode.build(from: [4, 2, 7, 1, 3, 6, 9])), TreeNode.build(from: [4, 7, 2, 9, 6, 3, 1]))
     }
+
+    func testIsBalanced() {
+        XCTAssertTrue(solution.isBalanced(TreeNode.build(from: [1])))
+        XCTAssertTrue(solution.isBalanced(TreeNode.build(from: [1, 2])))
+        XCTAssertTrue(solution.isBalanced(TreeNode.build(from: [1, 2, 3])))
+
+        XCTAssertTrue(solution.isBalanced2(TreeNode.build(from: [1])))
+        XCTAssertTrue(solution.isBalanced2(TreeNode.build(from: [1, 2])))
+        XCTAssertTrue(solution.isBalanced2(TreeNode.build(from: [1, 2, 3])))
+    }
 }
