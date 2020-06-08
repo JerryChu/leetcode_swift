@@ -66,4 +66,37 @@ class BinaryTreeTests: XCTestCase {
         XCTAssertTrue(solution.isBalanced2(TreeNode.build(from: [1, 2])))
         XCTAssertTrue(solution.isBalanced2(TreeNode.build(from: [1, 2, 3])))
     }
+
+    func testMerge() {
+        XCTAssertEqual(solution.mergeTrees(TreeNode.build(from: [1]), TreeNode.build(from: [2])), TreeNode.build(from: [3]))
+        XCTAssertEqual(solution.mergeTrees(TreeNode.build(from: [1, 2]), TreeNode.build(from: [1, 3, 4])), TreeNode.build(from: [2, 5, 4]))
+        XCTAssertEqual(solution.mergeTrees(TreeNode.build(from: [1, 2, 3]), TreeNode.build(from: [2])), TreeNode.build(from: [3, 2, 3]))
+        XCTAssertEqual(solution.mergeTrees(TreeNode.build(from: [1, 2, 3]), TreeNode.build(from: [1, 2])), TreeNode.build(from: [2, 4, 3]))
+        XCTAssertEqual(solution.mergeTrees(TreeNode.build(from: [1, 2, 3, 4]), TreeNode.build(from: [])), TreeNode.build(from: [1, 2, 3, 4]))
+    }
+
+    func testSymmetric() {
+        XCTAssertFalse(solution.isSymmetric(TreeNode.build(from: [1, 1])))
+        XCTAssertFalse(solution.isSymmetric(TreeNode.build(from: [1, 2])))
+        XCTAssertFalse(solution.isSymmetric(TreeNode.build(from: [1, 2, 3])))
+        XCTAssertFalse(solution.isSymmetric(TreeNode.build(from: [1, 2, 1])))
+        XCTAssertFalse(solution.isSymmetric(TreeNode.build(from: [1, 2, 2, 3, 4, 3, 4])))
+
+        XCTAssertTrue(solution.isSymmetric(TreeNode.build(from: [1])))
+        XCTAssertTrue(solution.isSymmetric(TreeNode.build(from: [1, 1, 1])))
+        XCTAssertTrue(solution.isSymmetric(TreeNode.build(from: [1, 2, 2])))
+        XCTAssertTrue(solution.isSymmetric(TreeNode.build(from: [1, 2, 2, 4, 3, 3, 4])))
+
+        XCTAssertFalse(solution.isSymmetric2(TreeNode.build(from: [1, 1])))
+        XCTAssertFalse(solution.isSymmetric2(TreeNode.build(from: [1, 2])))
+        XCTAssertFalse(solution.isSymmetric2(TreeNode.build(from: [1, 2, 3])))
+        XCTAssertFalse(solution.isSymmetric2(TreeNode.build(from: [1, 2, 1])))
+        XCTAssertFalse(solution.isSymmetric2(TreeNode.build(from: [1, 2, 2, 3, 4, 3, 4])))
+
+        XCTAssertTrue(solution.isSymmetric2(TreeNode.build(from: [1])))
+        XCTAssertTrue(solution.isSymmetric2(TreeNode.build(from: [1, 1, 1])))
+        XCTAssertTrue(solution.isSymmetric2(TreeNode.build(from: [1, 2, 2])))
+        XCTAssertTrue(solution.isSymmetric2(TreeNode.build(from: [1, 2, 2, 4, 3, 3, 4])))
+
+    }
 }

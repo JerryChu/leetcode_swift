@@ -18,11 +18,13 @@ public enum Problem: String, CaseIterable {
     case letterCombination = "letterCombination"
     case validParentheses = "validParentheses"
     case mergeTwoLists = "mergeTwoLists"
+    case symmetricTree = "symmetricTree"
     case maxDepthOfBinaryTree = "maxDepthOfBinaryTree"
     case balancedBinaryTree = "balancedBinaryTree"
     case invertBinaryTree = "invertBinaryTree"
     case diameterOfBinaryTree = "diameterOfBinaryTree"
     case binaryTreeTilt = "binaryTreeTilt"
+    case mergeBinaryTrees = "mergeBinaryTrees"
     case printBinaryTree = "printBinaryTree"
     case largestTimeFromDigits = "largestTimeFromDigits"
     case univaluedBinaryTree = "univaluedBinaryTree"
@@ -81,6 +83,8 @@ public class Solution {
             let list1 = ListNode.build(from: [1, 2, 4])
             let list2 = ListNode.build(from: [1, 3, 4])
             print(solution.mergeTwoLists(list1, list2)!.toArray())
+        case .symmetricTree:
+            print(solution.isSymmetric(TreeNode.build(from: [1, 2, 2, 3, 4, 4, 3])))
         case .maxDepthOfBinaryTree:
             let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
             print(solution.maxDepth(tree))
@@ -96,6 +100,9 @@ public class Solution {
         case .binaryTreeTilt:
             let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
             print(solution.findTilt(tree))
+        case .mergeBinaryTrees:
+            let tree = solution.mergeTrees(TreeNode.build(from: [1, 2, 3]), TreeNode.build(from: [4, 5]))!
+            print(tree.toArray())
         case .printBinaryTree:
             let tree = TreeNode.build(from: [1, 2, 3, 4, 5])
             print(solution.printTree(tree))
