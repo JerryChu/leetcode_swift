@@ -28,6 +28,7 @@ public enum Problem: String, CaseIterable {
     case printBinaryTree = "printBinaryTree"
     case largestTimeFromDigits = "largestTimeFromDigits"
     case univaluedBinaryTree = "univaluedBinaryTree"
+    case binaryTreeCousins = "binaryTreeCousins"
     case printVertically = "printVertically"
 }
 
@@ -110,6 +111,8 @@ public class Solution {
             print(solution.largestTimeFromDigits([1, 9, 9, 4]))
         case .univaluedBinaryTree:
             print(solution.isUnivalTree(TreeNode.build(from: [1, 1, 1, 2, 1])))
+        case .binaryTreeCousins:
+            print(solution.isCousins(TreeNode.build(from: [1, 2, 3]), 2, 3))
         case .printVertically:
             print(solution.printVertically("TO BE OR NOT TO BE"))
         }

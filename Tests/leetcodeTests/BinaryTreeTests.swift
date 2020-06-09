@@ -97,6 +97,14 @@ class BinaryTreeTests: XCTestCase {
         XCTAssertTrue(solution.isSymmetric2(TreeNode.build(from: [1, 1, 1])))
         XCTAssertTrue(solution.isSymmetric2(TreeNode.build(from: [1, 2, 2])))
         XCTAssertTrue(solution.isSymmetric2(TreeNode.build(from: [1, 2, 2, 4, 3, 3, 4])))
+    }
+    
+    func testIsCousins() {
+        XCTAssertFalse(solution.isCousins(TreeNode.build(from: [1, 2]), 1, 2))
+        XCTAssertFalse(solution.isCousins(TreeNode.build(from: [1, 2, 3]), 2, 3))
+        XCTAssertFalse(solution.isCousins(TreeNode.build(from: [1, 2, 3, 4]), 3, 4))
 
+        XCTAssertTrue(solution.isCousins(TreeNode.build(from: [1, 2, 3, 4, 5, 6]), 4, 6))
+        XCTAssertTrue(solution.isCousins(TreeNode.build(from: [1, 2, 3, 4, 5, 6]), 5, 6))
     }
 }

@@ -25,7 +25,7 @@ extension Solution {
         }
         let leftDepth = traverseDepth(of: root.left, result: &result)
         let rightDepth = traverseDepth(of: root.right, result: &result)
-        result = result && (leftDepth - rightDepth <= 1)
+        result = result && abs(leftDepth - rightDepth) <= 1
         return max(leftDepth + 1, rightDepth + 1)
     }
 }
